@@ -1,0 +1,21 @@
+﻿<Window x:Class="netfxver.VersionDetailsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VersionDetailsView" ResizeMode="NoResize" SizeToContent="WidthAndHeight" MinHeight="100">
+    <Grid>
+        <ItemsControl Name="PropertiesListView" ItemsSource="{Binding}" Margin="5">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{Binding Item1}" Grid.Column="0" FontWeight="Bold" Padding="0" />
+                        <TextBlock Text="{Binding Item2}" Grid.Column="1" TextWrapping="Wrap" />
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>
